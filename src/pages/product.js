@@ -35,8 +35,8 @@ const product = () => {
                       <p className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-600">Product apa yang kami buat ?</p>
                     </div>
                     <h1 className="max-w-3xl relative mb-9 text-left font-bold text-gray-800 text-5xl">We are build modern, <br /> faster Product <br /> access.</h1>
-                    <h2 className="text-base max-w-sm p-0 mb-14 text-left font-medium">
-                      Apakah yang dapat anda lakukan untuk mengembangkan bisnis anda ? Kami punya solusi yang tepat untuk permasalahan tersebut. Check it now !
+                    <h2 className="text-lg max-w-sm p-0 mb-14 text-left font-normal text-gray-700">
+                      Apa yang dapat anda lakukan untuk mengembangkan bisnis anda ? Kami punya solusi yang tepat untuk permasalahan tersebut. Check it !
                     </h2>
                     <div className="mt-5 sm:mt-10 sm:flex justify-start">
                       <div className="rounded-md">
@@ -62,16 +62,16 @@ const product = () => {
         </section>
 
         <div className="relative w-full max-w-7xl mx-auto">
-          <div className="relative mx-auto box-border pb-10 lg:pt-10 px-0 lg:pb-28 pt-4 xl:pb-16">
+          <div className="relative mx-auto box-border pb-10 mb-8 lg:pt-10 px-0 lg:pb-28 pt-4 xl:pb-16">
             <div className="relative max-w-5xl w-4/5 mx-auto">
               <div className="w-full mx-auto text-center max-w-2xl">
                 <h2 className="mx-auto mb-10 text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-600 uppercase text-sm">
                   Great App
                 </h2>
-                <h1 className="text-center text-5xl relative mb-8 font-bold">
+                <h1 className="text-center text-4xl sm:text-5xl md:text-6xl relative mb-9 font-bold text-gray-800">
                   Kembangkan Bisnis Anda.
                 </h1>
-                <p className="max-w-3xl mx-auto text-center text-base break-words whitespace-pre-line">
+                <p className="max-w-3xl mx-auto text-center text-lg font-normal text-gray-700 break-words whitespace-pre-line">
                   Dizaman digital seperti saat ini kita dituntut untuk mengikuti perkembangan zaman. Gadget, laptop, dan komputer sudah menjadi kebutuhan pokok untuk semua orang.
                   Dengan itu jadikanlah ini sebagai peluang bisnis anda, dengan memanfaatkan pelayanan Kami.
                 </p>
@@ -87,11 +87,11 @@ const product = () => {
 
                 <div className="relative w-full pb-20 overflow-hidden">
                   <div className="flex flex-col lg:flex-row relative w-full">
-                    <div className="relative pb-11 w-full lg:w-1/3">
+                    <div className="relative pb-11 w-full lg:w-1/2">
                       <h1 className="text-lg font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-600">Web App</h1>
-                      <p className="text-base">Laptop dan komputer adalah salah satu perangkat yang paling banyak digunakan pada era saat ini. Dengan Web Aplikasi seperti <span className="font-bold">E-Commerce app</span>, <span className="font-bold">Store App</span> dapat mengembangkan bisnis Anda.</p>
+                      <p className="text-lg font-normal text-gray-700">Laptop dan komputer adalah salah satu perangkat yang paling banyak digunakan pada era saat ini. Dengan Web Aplikasi seperti <span className="font-bold">E-Commerce app</span>, <span className="font-bold">Store App</span> dapat mengembangkan bisnis Anda.</p>
                     </div>
-                    <div className="relative w-full mx-auto lg:w-3/4">
+                    <div className="relative w-full mx-auto lg:w-1/2">
                       <div className="relative h-32">
                         <img className="absolute top-0 left-0 w-full h-full object-center object-fill" src={EcommerceApp} />
                       </div>
@@ -101,11 +101,11 @@ const product = () => {
 
                 <div className="relative w-full pb-20 overflow-hidden">
                   <div className="flex flex-col lg:flex-row relative w-full">
-                    <div className="relative pb-11 w-full lg:w-1/3">
+                    <div className="relative pb-11 w-full lg:w-1/2">
                       <h1 className="text-lg font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-600">Mobile App</h1>
-                      <p className="text-base">Hampir 80% orang didunia sudah mempunya handphone sebagai alat komunikasinya. Dengan memanfaatkan teknologi seperti <span className="font-bold">React Native</span>, kami dapat membuat aplikasi yang dapat diakses oleh seluruh orang.</p>
+                      <p className="text-lg font-normal text-gray-700">Hampir 80% orang didunia sudah mempunya handphone sebagai alat komunikasinya. Dengan memanfaatkan teknologi seperti <span className="font-bold">React Native</span>, kami dapat membuat aplikasi yang dapat diakses oleh seluruh orang.</p>
                     </div>
-                    <div className="relative w-full mx-auto lg:w-3/4">
+                    <div className="relative w-full mx-auto lg:w-1/2">
                       <div className="relative h-32">
                         <img className="absolute top-0 left-0 w-full h-full object-center object-fill" src={MobileApp} />
                       </div>
@@ -115,11 +115,11 @@ const product = () => {
 
                 <div className="relative w-full pb-20 overflow-hidden">
                   <div className="flex flex-col lg:flex-row relative w-full">
-                    <div className="relative pb-11 w-full lg:w-1/3">
+                    <div className="relative pb-11 w-full lg:w-1/2">
                       <h1 className="text-lg font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-600">Blog App/Website Official</h1>
-                      <p className="text-base">Sebagai salah satu sarana berbagi informasi, Blog dapat juga digunakan sebagai sarana Comercial seperti periklanan.</p>
+                      <p className="text-lg font-normal text-gray-700">Sebagai salah satu sarana berbagi informasi, Blog dapat juga digunakan sebagai sarana Comercial seperti periklanan.</p>
                     </div>
-                    <div className="relative w-full mx-auto lg:w-3/4">
+                    <div className="relative w-full mx-auto lg:w-1/2">
                       <div className="relative h-32">
                         <img className="absolute top-0 left-0 w-full h-full object-center object-fill" src={BlogApp} />
                       </div>

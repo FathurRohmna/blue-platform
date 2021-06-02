@@ -37,7 +37,7 @@ const author = ({projects}) => {
                       <p className="text-sm font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-600">Siapa pembuat website ini ?</p>
                     </div>
                     <h1 className="max-w-3xl relative mb-9 text-left font-bold text-gray-800 text-5xl">This is my, <br /> Potofolio site.</h1>
-                    <h2 className="max-w-sm p-0 mb-14 text-left text-base font-medium">
+                    <h2 className="max-w-sm p-0 mb-14 text-left text-lg font-normal text-gray-700">
                       Tujuan utama dibangunnya website ini adalah sebagai sarana pembelajaran sekaligus Portofolio untuk saya. Dibangun menggunakan Next js dan Tailwind CSS untuk bagian Client, dan Strapi untuk Server.
                     </h2>
                   </div>

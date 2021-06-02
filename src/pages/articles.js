@@ -40,10 +40,10 @@ const articles = ({ articles }) => {
                       <span className="lg:inline block"> in my</span>
                       <span className="lg:inline block"> page.</span>
                     </h1>
-                    <h2 className="lg:max-w-sm max-w-xs p-0 mb-14 text-left text-base font-medium">
-                      <span className="lg:inline block">Teknologi sangat berkembang cepat</span>
-                      <span className="lg:inline block"> saat ini, dapatkan perkembangan</span>
-                      <span className="lg:inline block"> teknologi terbaru.</span>
+                    <h2 className="lg:max-w-sm max-w-xs p-0 mb-14 text-left font-normal text-lg text-gray-700">
+                      <span className="lg:inline block">Teknologi sangat berkembang</span>
+                      <span className="lg:inline block"> cepat saat ini, dapatkan</span>
+                      <span className="lg:inline block"> perkembangan teknologi terbaru.</span>
                     </h2>
                   </div>
                 </div>
@@ -61,7 +61,7 @@ const articles = ({ articles }) => {
         </section>
 
         <div className="relative w-full max-w-7xl mx-auto">
-          <div className="relative mx-auto lg:pt-10 px-0 lg:pb-28 pt-10 xl:pb-16">
+          <div className="relative mx-auto lg:pt-10 px-0 pb-28 pt-10 xl:pb-16">
             <div className="relative max-w-5xl w-4/5 mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
 

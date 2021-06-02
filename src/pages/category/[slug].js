@@ -25,7 +25,7 @@ const category = ({categoryData}) => {
           />
           <title>{`${categoryTitle} - Blue.com`}</title>
         </Head>
-      <div className="relative mx-auto lg:pt-10 px-0 lg:pb-28 pt-10 xl:pb-16">
+      <div className="relative mx-auto lg:pt-10 px-0 pb-28 pt-10 xl:pb-16">
         <div className="relative max-w-5xl w-4/5 mx-auto">
           <h1 className="text-3xl font-semibold mb-20">{categoryTitle}</h1>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">

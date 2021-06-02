@@ -30,7 +30,7 @@ const document = () => {
                       <p className="text-sm font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-600">Cari informasi lainnya disini</p>
                     </div>
                     <h1 className="max-w-3xl relative mb-9 text-left font-bold text-gray-800 text-5xl">More knowledge, <br /> about techno.</h1>
-                    <h2 className="max-w-sm p-0 mb-14 text-left text-base">
+                    <h2 className="max-w-sm p-0 mb-14 text-left text-lg font-normal text-gray-700">
                       <span className="lg:inline block">Lebih tau mendalam tentang</span>
                       <span className="lg:inline block"> Framework dan Library yang</span>
                       <span className="lg:inline block"> saya gunakan dalam</span>

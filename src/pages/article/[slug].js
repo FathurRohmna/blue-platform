@@ -24,10 +24,10 @@ const article = ({ articleData }) => {
             />
             <title>{article.title}</title>
           </Head>
-          <div className="relative max-w-5xl w-full mx-auto">
+          <div className="relative max-w-5xl pb-28 w-full mx-auto">
             <div className="w-full relative mx-auto px-2 mb-2">
               <div className="relative w-full pb-16 h-96 overflow-hidden rounded-3xl">
-                <img className="absolute top-0 left-0 w-full h-full object-center object-cover" src={article.image_url} alt="" />
+                <img className="absolute top-0 left-0 w-full h-full object-contain" src={article.image_url} alt="" />
               </div>
             </div>
             <div className="w-full relative px-6">
