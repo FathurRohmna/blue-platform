@@ -6,7 +6,7 @@ export const ProjectCard = ({ project }) => {
     <div className="relative w-full">
       <div className="rounded overflow-hidden shadow-lg">
         <div className="relative overflow-hidden w-full h-52">
-          <img src={project.thumbnail_url} className="absolute top-0 left-0 w-full h-full object-cover object-center" />
+          <img src={project.thumbail_url} className="absolute top-0 left-0 w-full h-full object-cover object-center" />
         </div>
         <div className="px-6 py-4">
           <div className="mb-2">
