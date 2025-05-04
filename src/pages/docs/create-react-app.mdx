@@ -1,13 +1,18 @@
----
-title: "React js - Create React App"
-description: "Setting up Tailwind CSS in a Create React App project."
-tool: Create React App
----
+import DocumentationLayout from '@/layouts/DocumentationLayout';
+
+export const meta = {
+  title: 'Create React App',
+  metaTitle: 'Create React App - Tailwind CSS Guide',
+};
+
+export default ({ children }) => (
+  <DocumentationLayout layoutProps={{ meta }}>{children}</DocumentationLayout>
+);
 
 <h1 className="font-extrabold xl:text-4xl text-3xl mb-10">Create React App</h1>
 
 **React** adalah sebuah framework User Interface yang dikembangkan oleh **Facebook**. Hal itu membuatnya React
-menjadi salah satu web framework yang paling banyak dipakai oleh perusahaan perusaah besar. Dan di 
+menjadi salah satu web framework yang paling banyak dipakai oleh perusahaan perusaah besar. Dan di
 article ini akan menjelaskan konfigurasi awal untuk aplikasi React pertama kamu.
 
 <h2 className="font-bold xl:text-3xl text-2xl my-8">Persiapan</h2>
@@ -21,7 +26,9 @@ Jika node sudah terinstall, maka perintah ini akam menggembalikan nomor versi da
 
 **v12.18.1.**
 
-<h2 className="font-bold xl:text-3xl text-2xl my-8">Setting Boilerplate Applikasi</h2>
+<h2 className="font-bold xl:text-3xl text-2xl my-8">
+  Setting Boilerplate Applikasi
+</h2>
 
 Lumayan sulit untuk membuat React app secara manual, tetapi facebbok telah menciptakan sebuah Node package
 create-react-app untuk menghandle Boilerplate sebuah react applikasi.

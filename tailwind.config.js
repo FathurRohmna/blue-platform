@@ -1,5 +1,10 @@
 module.exports = {
-  purge: ['./src/pages/**/*.{js,ts,jsx,tsx,mdx}', './src/components/**/*.{js,ts,jsx,tsx}', './src/layouts/**/*.{js,ts,jsx,tsx}'],
+  purge: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
+    './src/layouts/**/*.{js,ts,jsx,tsx}',
+    './content/**/*.mdx',
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -8,7 +13,7 @@ module.exports = {
           css: {
             color: theme('colors.gray.500'),
             '> :first-child': { marginTop: '-' },
-            '> :last-child': { marginBottom: '-'},
+            '> :last-child': { marginBottom: '-' },
             '&:first-child > :first-child': {
               marginTop: '0',
             },
@@ -17,18 +22,18 @@ module.exports = {
             },
             p: {
               lineHeight: '1.5rem',
-              letterSpacing: '1px'
+              letterSpacing: '1px',
             },
             'h1, h2': {
               letterSpacing: '-0.05em',
-              lineHeight: '3rem'
+              lineHeight: '3rem',
             },
             'h2, h3': {
-              'scroll-margin-top': `${(70 + 40) /16}rem`,
+              'scroll-margin-top': `${(70 + 40) / 16}rem`,
             },
             'ul > li': {
               paddingLeft: '1.5em',
-              lineHeight: '1.5rem'
+              lineHeight: '1.5rem',
             },
             'ul > li::before': {
               width: '0.75em',
@@ -38,8 +43,8 @@ module.exports = {
               borderRadius: 0,
               backgroundColor: theme('color.gray.300'),
             },
-          }
-        }
+          },
+        },
       }),
       width: {
         xl: '36rem',
@@ -53,15 +58,15 @@ module.exports = {
         '(screen-18)': `calc(100vh - ${theme('spacing.18')})`,
       }),
       minWidth: {
-        sm: '30rem'
+        sm: '30rem',
       },
       minHeight: {
-        sm: '30rem'
+        sm: '30rem',
       },
       boxShadow: {
         px: '0 0 0 1px rgba(0, 0, 0, 0.5)',
         link: 'inset 0 -0.125em 0 0 #ff, inset 0 -0.375em 0 0 rgba(165, 243, 252, 0.4)',
-      }
+      },
     },
   },
   variants: {
@@ -72,4 +77,7 @@ module.exports = {
       textColor: ['group-focus'],
     },
   },
-}
+  plugins: [
+    require('@tailwindcss/typography'), // For MDX content styling
+  ],
+};
