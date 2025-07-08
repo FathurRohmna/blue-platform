@@ -1,19 +1,18 @@
-module.exports = {
-  purge: [
+const config = {
+  content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
     './src/layouts/**/*.{js,ts,jsx,tsx}',
     './content/**/*.mdx',
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      typography: (theme) => ({
+      typography: {
         DEFAULT: {
           css: {
-            color: theme('colors.gray.500'),
-            '> :first-child': { marginTop: '-' },
-            '> :last-child': { marginBottom: '-' },
+            color: '#6b7280', // gray-500
+            '> :first-child': { marginTop: '0' },
+            '> :last-child': { marginBottom: '0' },
             '&:first-child > :first-child': {
               marginTop: '0',
             },
@@ -41,11 +40,11 @@ module.exports = {
               top: 'calc(0.875em - 0.0625em)',
               left: 0,
               borderRadius: 0,
-              backgroundColor: theme('color.gray.300'),
+              backgroundColor: '#d1d5db', // gray-300
             },
           },
         },
-      }),
+      },
       width: {
         xl: '36rem',
       },
@@ -53,10 +52,10 @@ module.exports = {
         '4.5xl': '60rem',
         '8xl': '90rem',
       },
-      maxHeight: (theme) => ({
+      maxHeight: {
         sm: '30rem',
-        '(screen-18)': `calc(100vh - ${theme('spacing.18')})`,
-      }),
+        '(screen-18)': 'calc(100vh - 4.5rem)', // 4.5rem is spacing.18
+      },
       minWidth: {
         sm: '30rem',
       },
@@ -81,3 +80,5 @@ module.exports = {
     require('@tailwindcss/typography'), // For MDX content styling
   ],
 };
+
+export default config;

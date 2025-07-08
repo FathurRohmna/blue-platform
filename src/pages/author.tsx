@@ -6,8 +6,9 @@ import Link from 'next/link';
 import client from '../apollo-client';
 
 import { ProjectCard } from '@/components/ProjectCard';
+import { Project } from 'src/types/project';
 
-const author = ({ projects }) => {
+const author = ({ projects }: { projects: Project[] }) => {
   return (
     <div className="w-full">
       <div className="relative w-full min-h-screen">

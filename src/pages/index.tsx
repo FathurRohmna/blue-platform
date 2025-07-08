@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { Carousel } from 'react-responsive-carousel';
 
 import { CardUser } from '@/components/CardUser';
+import { Testimonial } from 'src/types/testimonial';
 
 export default function Home() {
-  const commentData = [
+  const commentData: Testimonial[] = [
     {
       name: 'Fathur Rohman',
       comment:
@@ -41,6 +41,7 @@ export default function Home() {
       position: 'Wirausaha',
     },
   ];
+  
   return (
     <div className="w-full">
       <Head>
@@ -479,23 +480,23 @@ export default function Home() {
                 </h2>
               </div>
 
-              <Carousel
+              {/* <Carousel
                 showArrows={false}
                 emulateTouch
                 showThumbs={false}
                 showStatus={false}
                 className="my-24"
-              >
-                {commentData.map((data, i) => (
-                  <CardUser
-                    key={i}
-                    profile={data.profile}
-                    name={data.name}
-                    comment={data.comment}
-                    position={data.position}
-                  />
-                ))}
-              </Carousel>
+              > */}
+              {commentData.map((data, i) => (
+                <CardUser
+                  key={i}
+                  profile={data.profile}
+                  name={data.name}
+                  comment={data.comment}
+                  position={data.position}
+                />
+              ))}
+              {/* </Carousel> */}
 
               <div className="flex justify-center w-full">
                 <div className="lg:mt-24 mt-12 mb-12 mx-6 w-full max-w-xs shadow-lg">
