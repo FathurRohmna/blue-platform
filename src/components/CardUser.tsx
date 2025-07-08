@@ -1,4 +1,16 @@
-export const CardUser = ({profile, name, comment, position, ...prop}) => {
+interface CardUserProps {
+  profile: string;
+  name: string;
+  comment: string;
+  position: string;
+}
+
+export const CardUser = ({
+  profile,
+  name,
+  comment,
+  position,
+}: CardUserProps) => {
   return (
     <div className="flex items-center justify-center py-12 px-4 w-full flex-shrink-0 ">
       <div className="flex flex-col items-center max-w-2xl visible">
@@ -11,15 +23,20 @@ export const CardUser = ({profile, name, comment, position, ...prop}) => {
         <footer className="flex flex-col lg:flex-row content-center lg:my-10 my-6">
           <span className="lg:mr-6 mr-0">
             <div className="relative inline-block w-16 h-16 rounded-full overflow-hidden">
-              <img src={profile} className="absolute top-0 left-0 w-full h-full object-cover object-center" />
+              <img
+                src={profile}
+                className="absolute top-0 left-0 w-full h-full object-cover object-center"
+              />
             </div>
           </span>
           <div className="text-sm lg:items-start flex flex-col font-semibold max-w-xs">
             {name}
-            <span className="mt-1 text-sm font-normal text-left">{position}</span>
+            <span className="mt-1 text-sm font-normal text-left">
+              {position}
+            </span>
           </div>
         </footer>
       </div>
     </div>
-  )
-}
+  );
+};

@@ -1,11 +1,23 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { ReactNode } from 'react';
 import { Title } from '@/components/Title';
 
-export default function DocumentationLayout(props) {
+interface LayoutProps {
+  meta?: {
+    metaTitle?: string;
+    title?: string;
+  };
+}
+
+interface DocumentationLayoutProps {
+  children: ReactNode;
+  layoutProps?: LayoutProps;
+}
+
+const DocumentationLayout: React.FC<DocumentationLayoutProps> = (props) => {
   const router = useRouter();
 
-  // Safely handle missing props
   const title =
     props?.layoutProps?.meta?.metaTitle ||
     props?.layoutProps?.meta?.title ||
@@ -28,4 +40,6 @@ export default function DocumentationLayout(props) {
       </div>
     </>
   );
-}
+};
+
+export default DocumentationLayout;

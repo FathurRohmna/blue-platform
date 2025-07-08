@@ -4,8 +4,9 @@ import Head from 'next/head';
 import client from '../apollo-client';
 
 import { ArticleCard } from '@/components/ArticleCard';
+import { Article } from 'src/types/article';
 
-const articles = ({ articles }) => {
+const articles = ({ articles }: { articles: Article[] }) => {
   return (
     <div className="w-full">
       <div className="relative w-full min-h-screen">

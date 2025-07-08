@@ -1,11 +1,33 @@
-import { gql, useQuery } from '@apollo/client';
+import { gql } from '@apollo/client';
 import Link from 'next/link';
 import Head from 'next/head';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { ParsedUrlQuery } from 'querystring';
 import ReactMarkdown from 'react-markdown';
 
 import client from '../../apollo-client';
+import { Category } from '../../types/category';
 
-const article = ({ articleData }) => {
+interface DetailedArticle {
+  title: string;
+  content: string;
+  image_url: string;
+  published_at: string;
+  categories: Category[];
+  users: {
+    username: string;
+  };
+}
+
+interface ArticlePageProps {
+  articleData: DetailedArticle[];
+}
+
+interface ArticleParams extends ParsedUrlQuery {
+  slug: string;
+}
+
+const ArticlePage: React.FC<ArticlePageProps> = ({ articleData }) => {
   return (
     <div className="relative w-full max-w-7xl mx-auto">
       {articleData &&
@@ -33,7 +55,7 @@ const article = ({ articleData }) => {
                   <img
                     className="absolute top-0 left-0 w-full h-full object-contain"
                     src={article.image_url}
-                    alt=""
+                    alt={article.title}
                   />
                 </div>
               </div>
@@ -57,7 +79,7 @@ const article = ({ articleData }) => {
                       {article.users.username}
                     </p>
                   </div>
-                  <ReactMarkdown children={article.content} />
+                  <ReactMarkdown>{article.content}</ReactMarkdown>
                 </div>
               </div>
             </div>
@@ -67,7 +89,7 @@ const article = ({ articleData }) => {
   );
 };
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const { data } = await client.query({
     query: gql`
       query getArticles {
@@ -79,16 +101,25 @@ export async function getStaticPaths() {
   });
 
   return {
-    paths: data.articles.map((article) => ({
+    paths: data.articles.map((article: { slug: string }) => ({
       params: {
         slug: article.slug,
       },
     })),
     fallback: false,
   };
-}
+};
 
-export async function getStaticProps({ params }) {
+export const getStaticProps: GetStaticProps<
+  ArticlePageProps,
+  ArticleParams
+> = async ({ params }) => {
+  if (!params) {
+    return {
+      notFound: true,
+    };
+  }
+
   const { data } = await client.query({
     query: gql`
       query getArticle($params: String!) {
@@ -119,6 +150,6 @@ export async function getStaticProps({ params }) {
       articleData: data.articlesConnection.values,
     },
   };
-}
+};
 
-export default article;
+export default ArticlePage;

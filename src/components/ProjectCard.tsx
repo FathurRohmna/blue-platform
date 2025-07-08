@@ -1,6 +1,7 @@
 import Link from 'next/link';
+import { Project } from 'src/types/project';
 
-export const ProjectCard = ({ project }) => {
+export const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div className="relative w-full">
       <div className="rounded overflow-hidden shadow-lg">
